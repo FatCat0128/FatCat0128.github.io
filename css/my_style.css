@@ -6,3 +6,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p , a, .subheading 
 a, .subheading {
     text-transform: none;
 }
+.underline{
+    width: 35% ;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.225);
+}
