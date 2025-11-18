@@ -1,3 +1,34 @@
+// 主題切換功能
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    // 讀取 localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        icon.innerHTML = '<i class="fa-solid fa-sun" style="color:#FFD43B;"></i>';
+    }
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        icon.innerHTML = isDark
+            ? '<i class="fa-solid fa-sun" style="color:#FFD43B;"></i>'
+            : '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+});
+// 首頁打字機特效
+document.addEventListener('DOMContentLoaded', () => {
+    // 已移除打字機動畫，恢復靜態顯示
+
+    // 主標題唰進場動畫
+    const nameTitle = document.querySelector('section#about h1');
+    if (nameTitle) {
+        nameTitle.classList.add('mask-animate');
+        setTimeout(() => {
+            nameTitle.classList.add('mask-animate-show');
+        }, 100);
+    }
+});
 /*!
 * Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
 * Copyright 2013-2023 Start Bootstrap

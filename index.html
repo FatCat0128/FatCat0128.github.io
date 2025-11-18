@@ -1,3 +1,11 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="http"], a[href^="https"]').forEach(function(a) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener');
+    });
+});
+</script>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="尼好嗎，我很好030" />
         <meta name="author" content="" />
-        <title>自我介紹</title>
+        <title>個人履歷</title>
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -16,8 +24,8 @@
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/my_style.css" rel="stylesheet"> 
+        <link href="css/styles.css?v=20251119" rel="stylesheet" />
+        <link href="css/my_style.css?v=20251119" rel="stylesheet">
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -40,6 +48,10 @@
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
+        <!-- 主題切換按鈕 -->
+        <button id="theme-toggle" style="position:fixed;top:24px;right:32px;z-index:999;background:rgba(255,255,255,0.7);border:none;border-radius:50%;width:44px;height:44px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">
+            <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
@@ -84,7 +96,12 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <div class="subheading mb-3">蟬鳴追追追 專題</div>
+                            <div class="subheading mb-3">
+                                蟬鳴追追追 專題
+                                <a href="https://jueichan.cc/" target="_blank" style="margin-left:6px;">
+                                    <i class="fa-solid fa-bugs"></i>
+                                </a>
+                            </div>
 
                             <p>參與「蟬鳴追追追」專題，負責資料蒐集與整理、圖表呈現、小遊戲製作。</p>
                         </div>
@@ -256,176 +273,94 @@
             </section>
             <hr class="m-0" />
             <!-- Portfolio-->
-            <section class="resume-section" id="portfolio">
-                <div class="row justify-content-center">
-                    <h2 class="mb-5">Portfolio</h2>
-                    <div class="container px-4 px-1g-5 mt-5">
+<section class="resume-section" id="portfolio" style="min-height: auto !important; height: auto !important; display: block !important; padding-top: 3rem !important; padding-bottom: 5rem !important;">
+    <div class="resume-section-content">
+        
+        <h2 class="mb-0" style="margin-bottom: 0.5rem !important; line-height: 1 !important; padding-bottom: 0.5rem !important;">Portfolio</h2>
+        
+        <div class="row justify-content-center">
+            
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"></div>
                     </div>
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white">
-                                        </div>
-                                </div>
-                             <img class="img-fluid" src="assets/img/01.png" alt="策展自己" />
-                         </div>
-                            <center>
-                            <a class=expedu_icon href="https://prezi.com/view/CysZ2KBRmGs74ie0RGTc/">策展自己</a>
-                            </center>
-                    </div>
-                    
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"></div>
-                                </div>
-                            <img class="img-fluid" src="assets/img/02.png" alt="通識課做的小網頁" />
-                        </div>
-                            <center>
-                            <a class=expedu_icon href="https://fatcat0128.github.io/HaHa.github.io/">通識課做的小網頁</a>
-                            </center>
-                    </div>
-
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"></div>
-                                </div>
-                            <img class="img-fluid" src="assets/img/03.png" alt="貓貓杯" />
-                        </div>
-                            <center>
-                            <a class=expedu_icon href="https://beta.womp.com/preview/498976">貓貓杯</a>
-                            </center>
-                    </div>
-
-                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"></div>
-                                </div>
-                            <img class="img-fluid" src="/assets/img/04.png" alt="海報" 
-                            onmouseover="this.src='/assets/img/plus.png';" 
-                            onmouseout="this.src='/assets/img/04.png';" />
-                        </div>
-                            <center>
-                            <p>海報</p>
-                            </center>
-                    </div>
-
-                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"></div>
-                                </div>
-                            <img class="img-fluid" src="/assets/img/05.png" alt="名片(正面)" 
-                            onmouseover="this.src='/assets/img/plus.png';" 
-                            onmouseout="this.src='/assets/img/05.png';"/>
-                        </div>
-                            <center>
-                            <p>名片(正面)</p>
-                            </center>
-                    </div>
-
-                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"></div>
-                                </div>
-                            <img class="img-fluid" src="/assets/img/06.png" alt="名片(背面)" 
-                            onmouseover="this.src='/assets/img/plus.png';" 
-                            onmouseout="this.src='/assets/img/06.png';"/>
-                        </div>
-                            <center>
-                            <p>名片(背面)</p>
-                            </center>
-                    </div>
-
+                    <img class="img-fluid" src="assets/img/01.png" alt="策展自己" />
                 </div>
-
-                <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                            <div class="modal-body text-center pb-5">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <!-- Portfolio Modal - Title-->
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">海報</h2>
-                                            <!-- Portfolio Modal - Image-->
-                                            <div class="divider-custom">
-                                            <img class="img-fluid rounded mb-5" src="assets/img/07.png" alt="海報"/>
-                                            </div>
-                                            </a>
-                                            <!-- Portfolio Modal - Text-->
-                                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                <i class="fas fa-xmark fa-fw"></i>
-                                                關閉
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center" style="position: relative; z-index: 10;">
+                    <a class="expedu_icon" href="https://prezi.com/view/CysZ2KBRmGs74ie0RGTc/">策展自己</a>
                 </div>
+            </div>
 
-                <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                            <div class="modal-body text-center pb-5">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <!-- Portfolio Modal - Title-->
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">名片(正面)</h2>
-                                            <!-- Portfolio Modal - Image-->
-                                            <div class="divider-custom">
-                                            <img class="img-fluid rounded mb-5" src="assets/img/08.png" alt="名片(正面)"/>
-                                            </div>
-                                            </a>
-                                            <!-- Portfolio Modal - Text-->
-                                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                <i class="fas fa-xmark fa-fw"></i>
-                                                關閉
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"></div>
                     </div>
+                    <img class="img-fluid" src="assets/img/02.png" alt="通識課做的小網頁" />
                 </div>
+                <div class="text-center" style="position: relative; z-index: 10;">
+                    <a class="expedu_icon" href="https://fatcat0128.github.io/HaHa.github.io/">通識課做的小網頁</a>
+                </div>
+            </div>
 
-                <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                            <div class="modal-body text-center pb-5">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <!-- Portfolio Modal - Title-->
-                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">名片(背面)</h2>
-                                            <!-- Portfolio Modal - Image-->
-                                            <div class="divider-custom">
-                                            <img class="img-fluid rounded mb-5" src="assets/img/09.png" alt="名片(背面)"/>
-                                            </div>
-                                            </a>
-                                            <!-- Portfolio Modal - Text-->
-                                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                <i class="fas fa-xmark fa-fw"></i>
-                                                關閉
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"></div>
                     </div>
+                    <img class="img-fluid" src="assets/img/03.png" alt="貓貓杯" />
                 </div>
-            </section>
+                <div class="text-center" style="position: relative; z-index: 10;">
+                    <a class="expedu_icon" href="https://beta.womp.com/preview/498976">貓貓杯</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"></div>
+                    </div>
+                    <img class="img-fluid" src="/assets/img/04.png" alt="海報" 
+                    onmouseover="this.src='/assets/img/plus.png';" 
+                    onmouseout="this.src='/assets/img/04.png';" />
+                </div>
+                <div class="text-center" style="position: relative; z-index: 10;">
+                    <p>海報</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"></div>
+                    </div>
+                    <img class="img-fluid" src="/assets/img/05.png" alt="名片(正面)" 
+                    onmouseover="this.src='/assets/img/plus.png';" 
+                    onmouseout="this.src='/assets/img/05.png';"/>
+                </div>
+                <div class="text-center" style="position: relative; z-index: 10;">
+                    <p>名片(正面)</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"></div>
+                    </div>
+                    <img class="img-fluid" src="/assets/img/06.png" alt="名片(背面)" 
+                    onmouseover="this.src='/assets/img/plus.png';" 
+                    onmouseout="this.src='/assets/img/06.png';"/>
+                </div>
+                <div class="text-center" style="position: relative; z-index: 10;">
+                    <p>名片(背面)</p>
+                </div>
+            </div>
+
+        </div>
+        </div> 
+</section>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
