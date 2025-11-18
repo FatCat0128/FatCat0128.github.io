@@ -1,3 +1,52 @@
+/* Cute skill progress bars - 修復進度條顯示 */
+.skills-list {
+    max-width: 720px;
+    margin-left: 0;
+    margin-right: auto;
+    gap: 16px;
+}
+.skill {
+    margin-bottom: 14px;
+}
+.skill-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+.skill-name i { margin-right: 8px; color: #6b5b95; }
+.skill-bar {
+    background: #f1f4f9;
+    border-radius: 999px;
+    height: 14px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+    overflow: visible;
+    position: relative;
+}
+.skill-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 2s cubic-bezier(.2,.8,.2,1);
+}
+.fill-1 { background: linear-gradient(90deg,#ff9a9e 0%,#fad0c4 100%); }
+.fill-2 { background: linear-gradient(90deg,#a18cd1 0%,#fbc2eb 100%); }
+.fill-3 { background: linear-gradient(90deg,#fbc2eb 0%,#a6c1ee 100%); }
+.fill-4 { background: linear-gradient(90deg,#f6d365 0%,#fda085 100%); }
+.fill-5 { background: linear-gradient(90deg,#84fab0 0%,#8fd3f4 100%); }
+.fill-6 { background: linear-gradient(90deg,#ffd3a5 0%,#fd6585 100%); }
+.fill-7 { background: linear-gradient(90deg,#cfd9df 0%,#e2ebf0 100%); }
+.fill-8 { background: linear-gradient(90deg,#fbe7c6 0%,#f6c1c1 100%); }
+.skill-percent {
+    font-weight: 700;
+    color: #666;
+    font-size: 0.9rem;
+    position: absolute;
+    top: -22px;
+    right: 0;
+    margin-left: 0;
+}
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p , a, .subheading {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
@@ -19,3 +68,60 @@ nav {
 body {
     background-image: url("/assets/img/diamond-eyes.png");
   }
+
+/* Cute skill progress bars */
+.skills-list {
+    max-width: 720px;
+    margin-left: 0;
+    margin-right: auto;
+    gap: 16px;
+}
+.skill {
+    margin-bottom: 14px;
+}
+.skill-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+.skill-name i { margin-right: 8px; color: #6b5b95; }
+.skill-bar {
+    background: #f1f4f9;
+    border-radius: 999px;
+    height: 14px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+    overflow: visible;
+    position: relative;
+}
+.skill-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 2s cubic-bezier(.2,.8,.2,1);
+}
+.fill-1 { background: linear-gradient(90deg,#ff9a9e 0%,#fad0c4 100%); }
+.fill-2 { background: linear-gradient(90deg,#a18cd1 0%,#fbc2eb 100%); }
+.fill-3 { background: linear-gradient(90deg,#fbc2eb 0%,#a6c1ee 100%); }
+.fill-4 { background: linear-gradient(90deg,#f6d365 0%,#fda085 100%); }
+.fill-5 { background: linear-gradient(90deg,#84fab0 0%,#8fd3f4 100%); }
+
+.fill-6 { background: linear-gradient(90deg,#ffd3a5 0%,#fd6585 100%); }
+.fill-7 { background: linear-gradient(90deg,#cfd9df 0%,#e2ebf0 100%); }
+.fill-8 { background: linear-gradient(90deg,#fbe7c6 0%,#f6c1c1 100%); }
+
+@media (max-width:768px) {
+    .skills-list { max-width: 100%; }
+    .skill-name { font-size: 14px; }
+}
+
+.skill-percent {
+    font-weight: 700;
+    color: #666;
+    font-size: 0.9rem;
+    position: absolute;
+    top: -22px;
+    right: 0;
+    margin-left: 0;
+}
